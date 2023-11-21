@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilates - My Hobby 🤸🏾</title>
+
+    <style>
+      body {
+        background-color: rgb(161, 221, 240);
+      }
+
+      .theme-button {
+        font-size: 12px;
+        background: black;
+        color: white;
+        padding: 5px 8px;
+      }
+
+      .theme-button:hover {
+        color: black;
+        background-color: white;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      .pilates-v-sit-photo {
+        border-radius: 20px;
+        transition: all 200ms ease-in-out;
+      }
+
+      .pilates-v-sit-photo:hover {
+        filter: contrast(80%);
+        transform: scale(1.2);
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        background-color: white;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+      button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid rgb(161, 221, 240);
+        background: white;
+        border-radius: 6px;
+        padding: 10px 15px;
+        transition: all 150ms ease-in-out;
+      }
+
+      button:hover {
+        background-color: rgb(161, 221, 240);
+        cursor: pointer;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20px;
+      }
+
+      .grid {
+        margin: 15px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 15px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        transition: all 150ms ease-in-out;
+        height: 100px;
+      }
+
+      .grid img:hover {
+        transform: scale(2);
+      }
+
+      .dark {
+        background: black;
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .dark .pilates-button {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>🤸🏾 What is Pilates?</h1>
+
+      <h2>My favourite hobby</h2>
+
+      <a href="https://en.wikipedia.org/wiki/Pilates" target="_blank">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/076/original/Pilates-27bb0ee84f994f7fb370dde3b4cbf37f.jpg?1700043151"
+          alt=""
+          class="pilates-v-sit-photo"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/075/original/Pilates-4-FB-940x675.png?1700043135"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/080/original/Picture8-3g8p6so1ltu4so5izoc9oq.jpg?1700046277"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/078/original/pilates_tile.jpg?1700044999"
+          alt=""
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/104/073/original/What_Is_Pilates_How_Does_It_Help_Body_At_Boronia.jpg?1700043085"
+          alt=""
+        />
+      </div>
+
+      <p>
+        Pilates is a form of exercise and body conditioning developed by Joseph
+        Pilates in the early 20th century, mostly as a method of injury recovery
+        for dancers. Pilates can improve muscle tone, flexibility and strength,
+        as well as help you heal from injuries.
+      </p>
+
+      <button class="pilates-button">Learn pilates</button>
+    </div>
+    <footer>Coded with 💜 by Jasmine Fardella</footer>
+
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.add("dark");
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
