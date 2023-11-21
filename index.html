@@ -15,11 +15,17 @@
         background: black;
         color: white;
         padding: 5px 8px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 6px;
+        border: 1px solid rgb(161, 221, 240);
+        transition: all 150ms ease-in-out;
       }
 
       .theme-button:hover {
         color: black;
         background-color: white;
+        cursor: pointer;
       }
 
       h1 {
@@ -57,7 +63,7 @@
         line-height: 1.5;
       }
 
-      button {
+      .pilates-button {
         display: block;
         margin: 0 auto;
         border: 1px solid rgb(161, 221, 240);
@@ -67,7 +73,7 @@
         transition: all 150ms ease-in-out;
       }
 
-      button:hover {
+      .pilates-button:hover {
         background-color: rgb(161, 221, 240);
         cursor: pointer;
       }
@@ -109,6 +115,10 @@
       .dark .pilates-button {
         background-color: black;
         color: white;
+      }
+
+      a {
+        text-decoration: none;
       }
     </style>
   </head>
@@ -152,14 +162,23 @@
         as well as help you heal from injuries.
       </p>
 
-      <button class="pilates-button">Learn pilates</button>
+      <a href="https://www.youtube.com/watch?v=NyP_waVgL1w&t=5s" target="_blank"
+        ><button class="pilates-button">Learn pilates!</button>
+      </a>
     </div>
     <footer>Coded with 💜 by Jasmine Fardella</footer>
 
     <script>
       function changeTheme() {
         let body = document.querySelector("body");
-        body.classList.add("dark");
+
+        // body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        }
       }
 
       let themeButton = document.querySelector(".theme-button");
